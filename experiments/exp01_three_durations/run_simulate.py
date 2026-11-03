@@ -33,7 +33,7 @@ from ttboundary.storage import exists, load_json, save_json, save_npz           
 
 def quick(cfg: dict) -> dict:
     cfg = dict(cfg)
-    cfg["tsc"] = {**cfg["tsc"], "n_sets": 2, "trials_per_set": 60}
+    cfg["tsc"] = {**cfg["tsc"], "n_sets": 2, "trials_per_set": 300}   # above the largest library (180 columns)
     cfg["tides"] = {**cfg["tides"], "n_sets": 2}
     cfg["test"] = {**cfg["test"], "n_trials": 40}
     cfg["data_dir"] = cfg["data_dir"] + "_quick"
